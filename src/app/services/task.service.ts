@@ -29,4 +29,7 @@ export class TaskService {
             this.Tasks[index] = updatedTask;
         }
     }
+    getTaskById(id: string): ITask | undefined {
+        return this.Tasks.find(task => task.id === id);
+    }
 }
